@@ -153,6 +153,47 @@ body {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin-bottom: 32px;
+  background: #ffffff;
+}
+
+.hero--photo {
+  position: relative;
+  overflow: hidden;
+  --hero-image: none;
+}
+
+.hero--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  transform: scale(1.05);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.hero--photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.hero--photo > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--chemistry {
+  --hero-image: url("bibv_chemistryroom.png");
+}
+
+.hero--mpr {
+  --hero-image: url("bibv_mprroom.png");
 }
 
 .eyebrow {
