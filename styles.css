@@ -296,6 +296,12 @@ code {
   font-size: 0.9rem;
 }
 
+.site-views {
+  margin: 6px 0 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 640px) {
   .nav {
     flex-direction: column;

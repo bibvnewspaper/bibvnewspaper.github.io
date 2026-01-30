@@ -10,6 +10,24 @@
     onScroll();
   }
 
+  const viewCount = document.querySelector("[data-view-count]");
+  if (viewCount) {
+    const namespace = "bibvnewspaper.github.io";
+    const key = "home";
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (typeof data?.value === "number") {
+          viewCount.textContent = data.value.toLocaleString();
+        } else {
+          viewCount.textContent = "—";
+        }
+      })
+      .catch(() => {
+        viewCount.textContent = "—";
+      });
+  }
+
   const markdownBlocks = document.querySelectorAll("[data-markdown-src]");
   if (markdownBlocks.length === 0) return;
 
