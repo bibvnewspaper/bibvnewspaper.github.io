@@ -37,6 +37,10 @@ Thank you for reading and supporting our student writers. If you have story idea
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body>
@@ -93,7 +97,7 @@ Thank you for reading and supporting our student writers. If you have story idea
         <div class="footer-grid">
           <div>
             <p class="footer-title">On a Monthly BASIS</p>
-            <p class="footer-meta">© 2026 On a Monthly BASIS Newspaper</p>
+            <p class="footer-meta">© 2026 All Rights Reserved</p>
           </div>
           <div>
             <p class="footer-title">Links</p>
@@ -107,7 +111,7 @@ Thank you for reading and supporting our student writers. If you have story idea
           <div>
             <p class="footer-title">Contact</p>
             <ul class="footer-links">
-              <li><a href="mailto:basisindependentblv.newspaper@gmail.com">basisindependentblv.newspaper@gmail.com</a></li>
+              <li><a href="mailto:basisindependentblv.newspaper@gmail.com">Email</a></li>
               <li><a href="https://github.com/bibvnewspaper/bibvnewspaper.github.io">GitHub</a></li>
               <li><a href="../../changelog/">Changelog</a></li>
             </ul>
@@ -157,6 +161,10 @@ Closing paragraph.
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../../styles.css" />
