@@ -1,8 +1,13 @@
+[Home](#on-a-monthly-basis-newspaper)
+
+---
+
 # On a MONTHLY BASIS Newspaper
 ## Welcome to `bibvnewspaper.github.io`
-This is the website for the BASIS Independent Bellevue Newspaper
-- This link is at `bibvnewspaper.github.io`.
-- Articles will be implemented with MDX
+This repo hosts the BASIS Independent Bellevue Newspaper website.
+- Homepage source: `index.html`
+- Styling: `styles.css`
+- Behavior: `script.js`
 
 ## Updates
-- Please visit the file `/changelog`. Most recent updates: v1.2026.01
+- Please visit the file `/changelog`. Most recent updates: v1.2026.06

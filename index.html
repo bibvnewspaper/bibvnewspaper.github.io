@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>On a MONTHLY BASIS Newspaper</title>
+    <meta
+      name="description"
+      content="BASIS Independent Bellevue student newspaper featuring monthly stories, interviews, and features."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__brand" href="#top">On a MONTHLY BASIS</a>
+          <div class="nav__links">
+            <a class="nav__link" href="#top">Home</a>
+            <a class="nav__link" href="about.html">About Us</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="top" class="main">
+        <section class="hero">
+          <p class="eyebrow">BASIS Independent Bellevue</p>
+          <h1>On a MONTHLY BASIS Newspaper</h1>
+          <p class="lead">
+            A student-led publication featuring monthly stories, interviews, and
+            features that celebrate our community.
+          </p>
+        </section>
+
+        <section class="section" id="about">
+          <h2>About the Publication</h2>
+          <p>
+            Our goal is to highlight student voices with clarity, curiosity, and
+            care. Issues are organized by month and cover campus events,
+            academics, and creative work.
+          </p>
+        </section>
+
+        <section class="section" id="samples">
+          <h2>Sample Code</h2>
+          <pre><code class="language-cpp">#include &lt;iostream&gt;
+int main() {
+    std::cout &lt;&lt; "BIBV Monthly Basis" &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+          <h2>Sample Equations</h2>
+          <p>
+            We often use math in science features, such as $E=mc^2$ in a
+            sentence and the following display equations:
+          </p>
+          <div class="equations" aria-label="Sample equations">
+            <div class="equation">$$E = mc^2$$</div>
+            <div class="equation">$$\text{Average} = \dfrac{\sum_{i=1}^{n} x_i}{n}$$</div>
+          </div>
+        </section>
+
+        <section class="section" id="updates">
+          <h2>Updates</h2>
+          <p>
+            Please visit the <span class="mono">/changelog</span> folder for the
+            latest updates.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 BASIS Independent Bellevue Newspaper</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+          displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+      defer
+    ></script>
+  </body>
+</html>
