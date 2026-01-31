@@ -40,13 +40,13 @@ body {
   margin: 0 auto;
   padding: 18px var(--pad);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  border-radius: 999px;
+  border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   background: linear-gradient(
       135deg,
@@ -86,11 +86,48 @@ body {
 }
 
 .nav__links {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 6px 16px;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-6px);
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  padding: 14px var(--pad);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.3)
+    ),
+    rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+  transition:
+    max-height 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  transition-delay: 0s;
+}
+
+.nav:hover .nav__links,
+.nav:focus-within .nav__links {
+  max-height: 240px;
+  opacity: 1;
+  transform: translateY(0);
+  overflow: visible;
+  transition-delay: 0.2s;
 }
 
 .nav__link {
@@ -398,14 +435,12 @@ code {
   }
 
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 14px var(--pad);
     border-radius: 20px;
   }
 
   .nav__links {
-    width: 100%;
+    grid-template-columns: 1fr;
     gap: 8px;
   }
 
