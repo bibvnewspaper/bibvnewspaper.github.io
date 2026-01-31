@@ -1,12 +1,11 @@
-# January 2026 Issue
+# PreComps Exams Coming Up!
 
-Welcome to the January 2026 edition of *On a Monthly BASIS*. This month we cover some new logistics.
+Welcome to the January 2026 edition of *On a Monthly BASIS*!
 
 ## Highlights
-Here are the highlights of January!
+Here are the highlights of January:
 - Pre-comps are coming up!
-- Hengsheng might fail English
-- He seems to be having a `sēnlín` headache
-
-## Editor's note
-Thank you for reading!
+- We now feature a new section called the "Anonymous Writer". 
+    - Here, they share experience, a story, or argue a statement for fun; 
+    - Try to guess who wrote it!
+- At the end of the paper is a featured new crossword puzzle.
