@@ -326,6 +326,12 @@ code {
   margin-top: 12px;
 }
 
+.equation {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
 .mono {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
@@ -446,5 +452,10 @@ code {
   .footer-grid {
     grid-template-columns: 1fr;
     max-width: 100%;
+  }
+
+  .equations {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
