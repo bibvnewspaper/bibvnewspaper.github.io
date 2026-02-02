@@ -41,3 +41,6 @@ The drawbacks are that having this much stuff is incredibly hard to maintain. Ma
 - And, managing these files is really a headache (even though programming is definitely fun)
 
 So now I have to meet up with the newspaper club and see what I can do 😭
+
+## Other Notes
+(quick note, I made an overleaf file that roughly outlines what the next steps are, a bit more formally)
