@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const allArticles = (await getCollection("articles"))
+  .filter((article) => !article.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const latest = allArticles[0];
+const rest = allArticles.slice(1, 4);
+
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+---
+
+<BaseLayout
+  title="On a MONTHLY BASIS Newspaper"
+  description="BASIS Independent Bellevue student newspaper featuring monthly stories, interviews, and features."
+>
+  <section class="hero">
+    <div class="eyebrow">BASIS Independent Bellevue</div>
+    <h1>On a MONTHLY BASIS Newspaper</h1>
+    <p>
+      A student-led newspaper featuring monthly stories, interviews, and events
+      around school life.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2 class="section-title">Latest Release</h2>
+    {latest ? (
+      <div class="issue-card">
+        <div class="eyebrow">{latest.data.issue}</div>
+        <h3>{latest.data.title}</h3>
+        <p>{latest.data.summary}</p>
+        <div class="article-meta">
+          <span>{formatDate(latest.data.date)}</span>
+          <a class="button" href={`/articles/${latest.slug}`}>Read</a>
+        </div>
+      </div>
+    ) : (
+      <p>No releases yet. Add your first article in `src/content/articles`.</p>
+    )}
+  </section>
+
+  <section>
+    <h2 class="section-title">Recent Articles</h2>
+    <div class="issues">
+      {rest.map((article) => (
+        <article class="issue-card">
+          <div class="eyebrow">{article.data.issue}</div>
+          <h3>{article.data.title}</h3>
+          <p>{article.data.summary}</p>
+          <div class="article-meta">
+            <span>{formatDate(article.data.date)}</span>
+            <a class="button" href={`/articles/${article.slug}`}>Read</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="section-title">Notes</h2>
+    <p>
+      Updates live in GitHub. Drop new MDX files into
+      <code>src/content/articles</code>
+      and they appear here automatically.
+    </p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+const { title, date, summary, issue } = Astro.props;
+---
+<section class="hero">
+  <div class="eyebrow">Issue {issue}</div>
+  <h1>{title}</h1>
+  <div class="article-meta">
+    <span>{date}</span>
+    <span>{summary}</span>
+  </div>
+</section>
+<div class="panel article-body">
+  <slot />
+</div>

@@ -1,21 +1,82 @@
-[Home](#on-a-monthly-basis-newspaper)
+# On a MONTHLY BASIS
 
+Minimal student newspaper site built with Astro + MDX.
+
+## Quick Start
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the site:
+
+```bash
+npm run dev
+```
+
+3. Add a new article:
+
+Create a new `.mdx` file in `src/content/articles/` (copy the example below).
+
+```mdx
+---
+title: "Your Article Title"
+date: 2026-02-01
+summary: "One sentence summary."
+issue: "Issue 2026.02"
+draft: false
 ---
 
-# On a MONTHLY BASIS Newspaper
-## Welcome to `bibvnewspaper.github.io`
-This repo hosts the BASIS Independent Bellevue Newspaper website.
-- Homepage source: `index.html`
-- Styling: `styles.css`
-- Behavior: `script.js`
+Write the story here.
+```
 
-## Updates
-- Please visit the file `/changelog`. Most recent updates: v1.2026.06
+### Code, LaTeX, Images
+
+- Code blocks:
+
+~~~mdx
+```js
+console.log("Hello");
+```
+~~~
+
+- LaTeX (inline + block):
+
+~~~mdx
+Einstein wrote $E=mc^2$.
+
+$$
+\\int_0^1 x^2 dx = \\frac{1}{3}
+$$
+~~~
+
+- Images: place files in `public/images/` and reference them:
+
+~~~mdx
+![Caption](/images/your-photo.jpg)
+~~~
+
+4. Commit and push:
+
+```bash
+git add src/content/articles/your-article.mdx
+git commit -m "Add February article"
+git push
+```
 
 ## Structure
-Written by Hengsheng Wang $\cdot$ January 30th, 2026
-- Home Page: Brief Introduction, Contact, Latest Release
-- About Us: Information about who we are.
-- Individual Pages for new issues
-    - Markdown files for content
-    - Backup MD assist within HTML in case of Markdown fetch failure.
+
+- `src/pages/` routes
+- `src/content/articles/` MDX articles
+- `src/styles/global.css` site styling
+- `archives1/` previous static site (untouched)
+
+## Build
+
+```bash
+npm run build
+```
+
+Outputs `dist/` for GitHub Pages.

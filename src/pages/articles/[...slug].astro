@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("articles");
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+---
+
+<BaseLayout title={`${article.data.title} | On a MONTHLY BASIS`} description={article.data.summary}>
+  <ArticleLayout
+    title={article.data.title}
+    date={formatDate(article.data.date)}
+    summary={article.data.summary}
+    issue={article.data.issue}
+  >
+    <Content />
+  </ArticleLayout>
+</BaseLayout>

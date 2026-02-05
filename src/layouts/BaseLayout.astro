@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+
+const { title = "On a MONTHLY BASIS", description = "BASIS Independent Bellevue student newspaper" } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <div class="page">
+      <header class="container">
+        <nav class="nav">
+          <a class="brand" href="/">On a MONTHLY BASIS</a>
+          <div class="nav-links">
+            <a href="/articles">Articles</a>
+            <a href="/about">About</a>
+            <a href="/archives1/index.html">Archive</a>
+          </div>
+        </nav>
+      </header>
+      <main class="container">
+        <slot />
+      </main>
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="brand">On a MONTHLY BASIS</div>
+            <p>Student newspaper, BASIS Independent Bellevue.</p>
+          </div>
+          <div>
+            <div class="eyebrow">Contact</div>
+            <p>basisindependentblv.newspaper@gmail.com</p>
+          </div>
+          <div>
+            <div class="eyebrow">GitHub</div>
+            <p>bibvnewspaper.github.io</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
