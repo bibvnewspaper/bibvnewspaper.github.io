@@ -2,8 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const articles = (await getCollection("articles"))
-  .filter((article) => !article.data.draft)
+const issues = (await getCollection("issues"))
+  .filter((issue) => !issue.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const formatDate = (date) =>
@@ -14,22 +14,22 @@ const formatDate = (date) =>
   }).format(date);
 ---
 
-<BaseLayout title="Articles | On a MONTHLY BASIS" description="All articles.">
+<BaseLayout title="Archives | On a MONTHLY BASIS" description="Previous issues.">
   <section class="hero">
     <div class="eyebrow">Archive</div>
-    <h1>Articles</h1>
-    <p>All published stories and features.</p>
+    <h1>Archives</h1>
+    <p>All published issues.</p>
   </section>
 
   <section class="issues">
-    {articles.map((article) => (
+    {issues.map((issue) => (
       <article class="issue-card">
-        <div class="eyebrow">{article.data.issue}</div>
-        <h3>{article.data.title}</h3>
-        <p>{article.data.summary}</p>
-        <div class="article-meta">
-          <span>{formatDate(article.data.date)}</span>
-          <a class="button" href={`/articles/${article.slug}`}>Read</a>
+        <div class="eyebrow">{issue.data.issue}</div>
+        <h3>{issue.data.title}</h3>
+        <p>{issue.data.summary}</p>
+        <div class="article-meta card">
+          <span>{formatDate(issue.data.date)}</span>
+          <a class="button" href={`/issues/${issue.slug}`}>Read</a>
         </div>
       </article>
     ))}

@@ -1,6 +1,16 @@
 # On a MONTHLY BASIS
 
-Minimal student newspaper site built with Astro + MDX.
+## About
+
+This is a website developed by Hengsheng Wang with extensive use of OpenAI's CODEX.
+- Runs on NextJS and Astro!
+- Github by defaults wants to use Jekyll for some reason...
+
+## Notes
+
+Last Updated ReadME: February 4th, 2026
+
+# Contribution Info
 
 ## Quick Start
 
@@ -10,7 +20,7 @@ Minimal student newspaper site built with Astro + MDX.
 npm install
 ```
 
-2. Start the site:
+2. Start the site for running on the local terminal: (run on localhost)
 
 ```bash
 npm run dev

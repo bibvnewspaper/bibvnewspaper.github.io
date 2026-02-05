@@ -2,12 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const allArticles = (await getCollection("articles"))
-  .filter((article) => !article.data.draft)
+const allIssues = (await getCollection("issues"))
+  .filter((issue) => !issue.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const latest = allArticles[0];
-const rest = allArticles.slice(1, 4);
+const latest = allIssues[0];
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en-US", {
@@ -37,31 +36,14 @@ const formatDate = (date) =>
         <div class="eyebrow">{latest.data.issue}</div>
         <h3>{latest.data.title}</h3>
         <p>{latest.data.summary}</p>
-        <div class="article-meta">
+        <div class="article-meta card">
           <span>{formatDate(latest.data.date)}</span>
-          <a class="button" href={`/articles/${latest.slug}`}>Read</a>
+          <a class="button" href={`/issues/${latest.slug}`}>Read</a>
         </div>
       </div>
     ) : (
-      <p>No releases yet. Add your first article in `src/content/articles`.</p>
+      <p>No releases yet. Add your first issue in `src/content/issues`.</p>
     )}
-  </section>
-
-  <section>
-    <h2 class="section-title">Recent Articles</h2>
-    <div class="issues">
-      {rest.map((article) => (
-        <article class="issue-card">
-          <div class="eyebrow">{article.data.issue}</div>
-          <h3>{article.data.title}</h3>
-          <p>{article.data.summary}</p>
-          <div class="article-meta">
-            <span>{formatDate(article.data.date)}</span>
-            <a class="button" href={`/articles/${article.slug}`}>Read</a>
-          </div>
-        </article>
-      ))}
-    </div>
   </section>
 
   <section class="panel">

@@ -98,10 +98,15 @@ main {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px rgba(30, 27, 25, 0.1);
-  position: sticky;
-  top: 28px;
-  z-index: 20;
   margin-top: 20px;
+}
+
+header.container {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  padding: 20px 0 12px;
+  background: linear-gradient(to bottom, rgba(246, 242, 238, 0.95), rgba(246, 242, 238, 0));
 }
 
 .brand {
@@ -141,7 +146,6 @@ main {
 
 .hero p {
   font-size: 1.1rem;
-  max-width: 620px;
   color: var(--muted);
 }
 
@@ -166,7 +170,8 @@ main {
 }
 
 .issue-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   padding: 22px;
   border-radius: 16px;
@@ -218,6 +223,16 @@ main {
   gap: 10px 18px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.article-meta.card {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.article-meta.card .button {
+  margin-left: auto;
 }
 
 .article-body {
