@@ -4,7 +4,7 @@
 
 This is a website developed by Hengsheng Wang with some extensive use of OpenAI's CODEX.
 - Runs on NextJS and Astro!
-- Github by defaults wants to use Jekyll for some reason...
+- Runs on `.nojekyll` because Github uses Jekyll for website building by default
 
 ## Notes
 

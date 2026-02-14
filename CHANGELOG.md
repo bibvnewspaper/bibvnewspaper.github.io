@@ -1,6 +1,11 @@
 # Changelog
 Below is the changelog documented for website functionality
 
+## v2026.02.02
+February 13th, 2026 - Hengseng Wang `@conquerer-of-tourist`
+* We have reached full website functionality.
+* I've talked to the Newspaper Team about docs formatting, everything is all set.
+
 ## v2026.02.01
 February 8th, 2026 - Hengsheng Wang `@conquerer-of-tourist`
 * Complete rebuild of entire website
