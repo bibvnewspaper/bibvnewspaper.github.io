@@ -149,6 +149,32 @@ header.container {
   color: var(--muted);
 }
 
+.hero-home {
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  align-items: center;
+  column-gap: clamp(22px, 4vw, 52px);
+}
+
+.hero-copy {
+  display: grid;
+  gap: 20px;
+}
+
+.hero-logo {
+  margin: 0;
+  padding: clamp(16px, 2.6vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .section-title {
   font-family: "Inter", system-ui, sans-serif;
   font-size: 1.7rem;
@@ -271,5 +297,15 @@ header.container {
 
   .hero {
     padding-top: 48px;
+  }
+
+  .hero-home {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-logo {
+    max-width: 440px;
+    width: 100%;
   }
 }
