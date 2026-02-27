@@ -2,6 +2,8 @@
 
 ## Steps for adding MDX and Articles to the repo!
 
+Last Updated February 26th, 2026. (Please don't read any of the things below, they are absolute junk and will do no good.)
+
 1. Clone the repo and install dependencies (run this on your terminal)
 
 ```bash

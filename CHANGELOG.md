@@ -1,8 +1,14 @@
 # Changelog
 Below is the changelog documented for website functionality
 
+## v2026.02.03
+
+February 26th, 2026 - Hengsheng Wang `@conquerer-of-tourist`
+* I created the baseline page for the new February post!
+* More information about contributions will be available in the not too distant future.
+
 ## v2026.02.02
-February 13th, 2026 - Hengseng Wang `@conquerer-of-tourist`
+February 13th, 2026 - Hengsheng Wang `@conquerer-of-tourist`
 * We have reached full website functionality.
 * I've talked to the Newspaper Team about docs formatting, everything is all set.
 

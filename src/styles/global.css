@@ -149,6 +149,11 @@ header.container {
   color: var(--muted);
 }
 
+.hero-intro {
+  margin: 0;
+  line-height: 1.8;
+}
+
 .hero-home {
   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
   align-items: center;
@@ -189,9 +194,18 @@ header.container {
   padding: 26px;
 }
 
+.guidelines-copy {
+  margin: 0 0 1rem;
+  line-height: 1.8;
+}
+
+.guidelines-panel .guidelines-copy:last-of-type {
+  margin-bottom: 0;
+}
+
 .issues {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 18px;
 }
 
@@ -237,10 +251,52 @@ header.container {
   font-size: 0.95rem;
 }
 
-.footer-grid {
+.footer-content {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.footer-resources-wrap {
+  margin-top: 8px;
+}
+
+.footer-resources {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.footer-resources caption {
+  caption-side: top;
+  text-align: left;
+  padding: 10px 12px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.footer-resources th,
+.footer-resources td {
+  border-top: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.footer-resources tr:first-child th,
+.footer-resources tr:first-child td {
+  border-top: 1px solid var(--line);
+}
+
+.footer-resources th {
+  width: 170px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  color: var(--ink);
+  background: rgba(162, 67, 39, 0.04);
 }
 
 .article-meta {
@@ -307,5 +363,24 @@ header.container {
   .hero-logo {
     max-width: 440px;
     width: 100%;
+  }
+}
+
+.footer a,
+.footer-resources a {
+  font-family: monospace;
+  color: #115da5;
+}
+
+.footer a:hover,
+.footer-resources a:hover {
+  text-decoration: none;
+  transition: 0.4s;
+  color: #3983cd;
+}
+
+@media (max-width: 720px) {
+  .footer-resources th {
+    width: 130px;
   }
 }
