@@ -253,50 +253,43 @@ header.container {
 
 .footer-content {
   display: grid;
-  gap: 14px;
+  grid-template-columns: minmax(220px, 1fr) minmax(420px, 2fr);
+  align-items: start;
+  gap: 24px;
 }
 
-.footer-resources-wrap {
-  margin-top: 8px;
+.footer-intro {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-intro p {
+  margin: 0 0 10px;
 }
 
 .footer-resources {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.55);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.footer-resources caption {
-  caption-side: top;
-  text-align: left;
-  padding: 10px 12px;
+.footer-column {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.footer-column h3 {
+  margin: 0;
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 
-.footer-resources th,
-.footer-resources td {
-  border-top: 1px solid var(--line);
-  padding: 10px 12px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.footer-resources tr:first-child th,
-.footer-resources tr:first-child td {
-  border-top: 1px solid var(--line);
-}
-
-.footer-resources th {
-  width: 170px;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 500;
-  color: var(--ink);
-  background: rgba(162, 67, 39, 0.04);
+.footer-column a {
+  line-height: 1.5;
 }
 
 .article-meta {
@@ -368,7 +361,7 @@ header.container {
 
 .footer a,
 .footer-resources a {
-  font-family: monospace;
+  font-family: "Inter", system-ui, sans-serif;
   color: #115da5;
 }
 
@@ -380,7 +373,12 @@ header.container {
 }
 
 @media (max-width: 720px) {
-  .footer-resources th {
-    width: 130px;
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .footer-resources {
+    grid-template-columns: 1fr;
   }
 }
