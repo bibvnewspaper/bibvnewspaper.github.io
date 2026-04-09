@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Average&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Average&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css");
 @import url("https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css");
 
@@ -62,7 +62,7 @@ pre code {
 
 .article-body img {
   max-width: 100%;
-  border-radius: 14px;
+  border-radius: 8px;
   display: block;
   margin: 24px auto;
   border: 1px solid var(--line);
@@ -110,7 +110,7 @@ header.container {
 }
 
 .brand {
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1.4rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -121,7 +121,7 @@ header.container {
   gap: 20px;
   font-size: 0.95rem;
   color: var(--muted);
-  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .hero {
@@ -188,7 +188,7 @@ header.container {
 
 .panel {
   background: var(--card);
-  border-radius: var(--radius);
+  border-radius: 12px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   padding: 26px;
@@ -214,7 +214,7 @@ header.container {
   flex-direction: column;
   gap: 10px;
   padding: 22px;
-  border-radius: 16px;
+  border-radius: 13px;
   border: 1px solid var(--line);
   background: #ffffff;
 }
@@ -253,9 +253,9 @@ header.container {
 
 .footer-content {
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) minmax(420px, 2fr);
-  align-items: start;
-  gap: 24px;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
 }
 
 .footer-intro {
@@ -264,32 +264,7 @@ header.container {
 }
 
 .footer-intro p {
-  margin: 0 0 10px;
-}
-
-.footer-resources {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.footer-column {
-  display: grid;
-  align-content: start;
-  gap: 8px;
-}
-
-.footer-column h3 {
   margin: 0;
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-
-.footer-column a {
-  line-height: 1.5;
 }
 
 .article-meta {
@@ -324,7 +299,7 @@ header.container {
 
 .panel.article-body {
   box-shadow: none;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .article-body a {
@@ -359,26 +334,8 @@ header.container {
   }
 }
 
-.footer a,
-.footer-resources a {
-  font-family: "Inter", system-ui, sans-serif;
-  color: #115da5;
-}
-
-.footer a:hover,
-.footer-resources a:hover {
-  text-decoration: none;
-  transition: 0.4s;
-  color: #3983cd;
-}
-
 @media (max-width: 720px) {
   .footer-content {
-    grid-template-columns: 1fr;
     gap: 14px;
-  }
-
-  .footer-resources {
-    grid-template-columns: 1fr;
   }
 }

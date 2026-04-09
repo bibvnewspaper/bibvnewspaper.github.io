@@ -95,27 +95,8 @@ Thank you for reading and supporting our student writers. If you have story idea
 
       <footer class="site-footer">
         <div class="footer-grid">
-          <div>
-            <p class="footer-title">On a Monthly BASIS</p>
-            <p class="footer-meta">© 2026 All Rights Reserved</p>
-          </div>
-          <div>
-            <p class="footer-title">Links</p>
-            <ul class="footer-links">
-              <li><a href="../../index.html">Home</a></li>
-              <li><a href="../../about.html">About</a></li>
-              <li><a href="../../formatting.html">Format</a></li>
-              <li><a href="index.html">Latest Issue</a></li>
-            </ul>
-          </div>
-          <div>
-            <p class="footer-title">Contact</p>
-            <ul class="footer-links">
-              <li><a href="mailto:basisindependentblv.newspaper@gmail.com">Email</a></li>
-              <li><a href="https://github.com/bibvnewspaper/bibvnewspaper.github.io">GitHub</a></li>
-              <li><a href="../../changelog/">Changelog</a></li>
-            </ul>
-          </div>
+          <p class="footer-title">ON A MONTHLY BASIS</p>
+          <p class="footer-meta">Student Newspaper, BASIS Independent Bellevue</p>
         </div>
       </footer>
     </div>
@@ -212,27 +193,8 @@ Closing paragraph.
 
       <footer class="site-footer">
         <div class="footer-grid">
-          <div>
-            <p class="footer-title">On a Monthly BASIS</p>
-            <p class="footer-meta">© 2026 On a Monthly BASIS Newspaper</p>
-          </div>
-          <div>
-            <p class="footer-title">Links</p>
-            <ul class="footer-links">
-              <li><a href="../../../index.html">Home</a></li>
-              <li><a href="../../../about.html">About</a></li>
-              <li><a href="../../../formatting.html">Format</a></li>
-              <li><a href="../index.html">Latest Issue</a></li>
-            </ul>
-          </div>
-          <div>
-            <p class="footer-title">Contact</p>
-            <ul class="footer-links">
-              <li><a href="mailto:basisindependentblv.newspaper@gmail.com">basisindependentblv.newspaper@gmail.com</a></li>
-              <li><a href="https://github.com/bibvnewspaper/bibvnewspaper.github.io">GitHub</a></li>
-              <li><a href="../../../changelog/">Changelog</a></li>
-            </ul>
-          </div>
+          <p class="footer-title">ON A MONTHLY BASIS</p>
+          <p class="footer-meta">Student Newspaper, BASIS Independent Bellevue</p>
         </div>
       </footer>
     </div>
