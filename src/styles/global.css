@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+.redlink {
+  color: #b53737;
+}
+
 a:hover {
   color: var(--accent);
 }
@@ -293,7 +297,7 @@ header.container {
 .article-body h1,
 .article-body h2,
 .article-body h3 {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Average", "Inter", system-ui, sans-serif;
   margin-top: 2.4rem;
 }
 
